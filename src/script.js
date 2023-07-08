@@ -90,4 +90,4 @@ startClock = () => {
   clock();
 };
 
-startClock();
+window.addEventListener("load", startClock);
