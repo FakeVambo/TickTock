@@ -7,8 +7,8 @@ startClock = () => {
 
   const ctx = canvas.getContext("2d");
   let gradient = ctx.createLinearGradient(0, 0, w, h);
-  gradient.addColorStop(0, "gray");
-  gradient.addColorStop(1, "white");
+  gradient.addColorStop(0.109, "rgba(26,33,64,1)");
+  gradient.addColorStop(0.871, "rgba(81,84,115,1)");
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, w, h);
 
@@ -80,6 +80,7 @@ startClock = () => {
     ctx.beginPath();
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = color;
+    ctx.lineCap = "round";
     ctx.moveTo(ax, ay);
     ctx.lineTo(x, y);
     ctx.stroke();
